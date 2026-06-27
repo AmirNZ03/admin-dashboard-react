@@ -1,0 +1,358 @@
+:root {
+  --theme: #090c1e;
+  --theme-color: #040415;
+  --ds: #AAB3D9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.adg {
+  width: 80%;
+}
+
+.users-table-wrapper {
+  width: 100%;
+  margin-top: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sca {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.sca th,
+.sca td {
+  padding: 16px 14px;
+  border-bottom: 1px solid rgba(170, 179, 217, 0.12);
+  color: var(--ds);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sca th {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.msa {
+  color: var(--ds);
+}
+
+.name {
+  text-align: right;
+}
+
+.actions-cell {
+  min-width: 160px;
+}
+
+.actions-cell button {
+  margin: 4px;
+}
+
+.hazf {
+  border: none;
+  outline: none;
+  background-color: rgba(231, 46, 46, 0.678);
+  width: 5rem;
+  min-height: 2.2rem;
+  border-radius: 0.5rem;
+  color: var(--ds);
+  cursor: pointer;
+}
+
+.edir {
+  border: none;
+  outline: none;
+  background-color: rgba(30, 98, 224, 0.678);
+  width: auto !important;
+  min-height: 2.2rem;
+  border-radius: 0.5rem;
+  color: var(--ds);
+  cursor: pointer;
+}
+
+.image-cell {
+  min-width: 120px;
+}
+
+.aks {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.no-image {
+  color: var(--ds);
+  opacity: 0.8;
+}
+
+.edit-product {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+.edit-inp {
+  background-color: unset;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 10px;
+}
+
+.aps {
+  background-color: var(--ds);
+  width: 30rem;
+  height: 15rem;
+  border-radius: 0.5rem;
+}
+
+.lpsa {
+  display: flex;
+  flex-direction: column;
+}
+
+.aksx {
+  width: 8rem !important;
+  height: 8rem !important;
+  margin-top: 4rem !important;
+  color: var(--ds);
+  max-width: 15rem !important;
+}
+
+.maxj {
+  display: flex;
+  flex-direction: column;
+}
+
+/* لپ‌تاپ کوچک / تبلت افقی */
+@media (max-width: 992px) {
+  .sca {
+    min-width: 680px;
+  }
+
+  .sca th,
+  .sca td {
+    padding: 14px 10px;
+    font-size: 0.95rem;
+  }
+
+  .aks {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hazf,
+  .edir {
+    width: 4.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* تبلت و موبایل: کارت‌شدن هر ردیف */
+@media (max-width: 768px) {
+  .users-table-wrapper {
+    overflow-x: visible;
+  }
+
+  .sca,
+  .sca thead,
+  .sca tbody,
+  .sca th,
+  .sca td,
+  .sca tr {
+    display: block;
+    width: 100%;
+  }
+
+  .sca {
+    min-width: 100%;
+    border-collapse: separate;
+  }
+
+  .sca thead {
+    display: none;
+  }
+
+  .sca tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .sca tr {
+    border: 1px solid rgba(170, 179, 217, 0.15);
+    border-radius: 14px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .sca td {
+    border: none;
+    padding: 10px 0;
+    text-align: right;
+  }
+
+  .sca td::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--ds);
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: right;
+  }
+
+  .actions-cell {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: unset;
+  }
+
+  .actions-cell::before {
+    width: 100%;
+  }
+
+  .actions-cell button {
+    margin: 0;
+    flex: 1 1 120px;
+  }
+
+  .name,
+  .count,
+  .image-cell {
+    text-align: right;
+  }
+
+  .image-cell {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    min-width: unset;
+  }
+
+  .aks {
+    margin: 0;
+    width: 68px;
+    height: 68px;
+  }
+
+  .edit-product {
+    padding: 0 14px;
+  }
+
+  .edit-inp {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+}
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+  .sca tr {
+    padding: 10px;
+  }
+
+  .actions-cell {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions-cell button {
+    width: 100%;
+    flex: unset;
+  }
+
+  .aks {
+    width: 60px;
+    height: 60px;
+  }
+
+  .edit-product {
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .edit-inp {
+    font-size: 0.95rem;
+  }
+}
+
+.pagin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  
+  margin-top: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* دکمه‌ها */
+.pagin button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* hover */
+.pagin button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* حالت disabled */
+.pagin button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* شماره صفحه */
+.pagin span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #f1f5f9;
+}
+
+/* ریسپانسیو موبایل */
+@media (max-width: 480px) {
+  .pagin {
+    gap: 8px;
+  }
+
+  .pagin button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .pagin span {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}

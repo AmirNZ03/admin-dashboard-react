@@ -1,0 +1,288 @@
+/* .coli {
+  background: url(./1.jpg);
+  margin-left: 71.25rem;
+  height: 100vh;
+  right: 0px;
+  z-index: 4;
+  width: 14rem;
+  margin-top: -4rem;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+} */
+.coli {
+  background: url(./1.jpg);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 14rem;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 992px){
+
+/* سایدبار مخفی */
+.coli{
+  transform: translateX(100%);
+  width:14rem;
+}
+
+/* وقتی همبرگری زده شود */
+.coli.open{
+  transform: translateX(0);
+}
+
+/* حالت بسته: فقط آیکن */
+.coli:not(.open) .nzl p,
+.coli:not(.open) .nzlf p{
+  display:none;
+}
+
+.coli:not(.open) .as p:not(:first-child){
+  display:none;
+}
+
+.coli:not(.open) .xa{
+  display:none;
+}
+
+.coli:not(.open) .dpal{
+  display:none;
+}
+.coli:not(.open) .as {
+    width: 5rem;
+    justify-content: center;
+  }
+
+  /* وقتی باز است هدر کامل باشد */
+  .coli.open .as {
+    width: 14rem;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px){
+
+.coli{
+  transform: translateX(100%);
+  width: 14rem;
+}
+
+.coli.open{
+  transform: translateX(0);
+}
+
+}
+
+@media (min-width: 993px) {
+  .coli {
+    transform: translateX(0);
+  }
+}
+
+
+.as {
+  width: 14rem;
+  min-height: 5rem;
+  background-color: #4527a0;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  background: url(./1.jpg);
+  position: relative;
+  margin-top: 1rem;
+}
+
+.sear {
+  border: none;
+  outline: none;
+  backdrop-filter: blur(40px);
+  background: url(./1.jpg);
+  border: 1px solid #AAB3D9;
+  border-radius: 1rem;
+  margin: 0.75rem 0 0 1rem;
+  color: #AAB3D9;
+}
+
+::placeholder {
+  text-align: right;
+  font-size: 14px;
+}
+
+.navi {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;   /* فاصله عمودی بین آیتم‌ها */
+  padding-top: 1rem;
+}
+
+.la {
+  display: flex;
+  margin-top: 1rem;
+}
+
+/* #oa {
+  position: absolute;
+  margin-left: 5.5rem !important;
+  margin-top: -1.5rem !important;
+  font-size: 28px;
+}
+
+#oas {
+  position: absolute;
+  margin-left: 6.5rem;
+  margin-top: -1.5rem;
+  font-size: 28px;
+} */
+
+.vira {
+  padding-right: 1rem;
+}
+
+/* .nzlf,
+.nzl {
+  display: flex;
+  padding-left: 3rem;
+  color: #AAB3D9;
+  padding-top: 2rem; /* کاهش یافته */
+ */
+
+.nzl,
+.nzlf{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+    color: #AAB3D9;
+
+}
+
+#oa,
+#oas{
+  font-size: 24px;
+}
+
+.xa {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.dpal {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  margin-top: 0.5rem;
+}
+
+.saa {
+  color: #AAB3D9;
+  margin-top: 1.25rem;
+  padding-left: 2rem !important;
+  position: absolute;
+}
+
+.nj {
+  color: #AAB3D9;
+}
+
+.fa {
+  color: wheat;
+  margin-left: 2rem;
+  margin-top: 0.25rem;
+}
+
+.yi {
+  width: 5rem;
+  height: 2rem;
+  background-color: #AAB3D9;
+  border-radius: 1rem;
+  font-size: 13px;
+  margin-top: 0.25rem;
+}
+
+.nz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    white-space: nowrap;
+
+}
+
+.cir {
+  border-radius: 100%;
+  background-color: green;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+ .active{
+    background-color: #4527a0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.coli::-webkit-scrollbar {
+  width: 6px;
+}
+
+.coli::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.coli::-webkit-scrollbar-track {
+  background: transparent;
+}
+.nzl a,
+.nzlf a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  color: #AAB3D9;
+}
+.nzl p,
+.nzlf p{
+  margin: 0;
+}
+@media (max-width: 992px){
+
+.as{
+  width:5rem;
+  justify-content:center;
+}
+
+}
+#oa,
+#oas{
+  font-size:24px;
+  display:flex;
+  align-items:center;
+}
+
+@media (max-width:768px){
+  .yi {
+    display:none;
+  }
+}

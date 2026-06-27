@@ -1,0 +1,224 @@
+:root {
+  --theme: #090c1e;
+  --theme-color: #040415;
+  --ds: #aab3d9;
+}
+
+/* ================= DESKTOP TABLE ================= */
+.sca {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.sca th,
+.sca td {
+  color: var(--ds);
+  text-align: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  white-space: nowrap;
+}
+
+.aks {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 768px) {
+
+  body, html {
+    overflow-x: hidden !important;
+  }
+
+  .sca {
+    display: block;
+    width: 100%;
+  }
+
+  .sca thead {
+    display: none;
+  }
+
+  .sca tr {
+    display: block;
+    width: 100%;
+    background: rgba(255,255,255,0.03);
+    margin-bottom: 15px;
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .sca td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+  }
+
+  .sca td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #8fa5d8;
+    margin-left: 10px;
+  }
+
+  .aks {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .hazf,
+  .edir {
+    width: 48%;
+  }
+}
+
+/* =====================================================
+   🔥 MOBILE PERFECT MODE (NO HORIZONTAL SCROLL)
+===================================================== */
+/* @media only screen and (max-width: 768px) {
+
+  /* جلوگیری کامل از اسکرول افقی */
+  /* body, html {
+    overflow-x: hidden !important;
+  }
+
+  .sca {
+    display: block;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* مخفی کردن کامل سرستون */
+  /* .sca thead {
+    display: none !important;
+  }
+
+  .sca tr {
+    display: block;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  /* هر خانه یک خط مستقل با عنوان */
+  /* .sca td {
+    display: block;
+    width: 100% !important;
+    text-align: right;
+    padding: 10px 0;
+    position: relative;
+    border: none;
+    overflow-x: hidden;
+    white-space: normal;
+  } */
+
+  /* عنوان ستون */
+  /* .sca td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #8fa5d8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.85rem;
+  } */
+
+  /* عکس کوچک */
+  /* .aks {
+    display: block;
+    margin: 5px auto 15px auto;
+    width: 70px !important;
+    height: 70px !important;
+  } */
+
+  /* دکمه‌ها وسط */
+  /* .hazf,
+  .edir {
+    width: 48%;
+    margin-top: 8px;
+  }  */ 
+
+
+/* =====================================================
+   SUPER SMALL (<=480px)
+===================================================== */
+@media only screen and (max-width: 480px) {
+  .aks {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .sca td {
+    font-size: 0.8rem;
+  }
+}
+.pagin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  
+  margin-top: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* دکمه‌ها */
+.pagin button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* hover */
+.pagin button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* حالت disabled */
+.pagin button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* شماره صفحه */
+.pagin span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #f1f5f9;
+}
+
+/* ریسپانسیو موبایل */
+@media (max-width: 480px) {
+  .pagin {
+    gap: 8px;
+  }
+
+  .pagin button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .pagin span {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}

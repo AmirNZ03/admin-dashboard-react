@@ -1,0 +1,137 @@
+:root {
+  --theme: #090c1e;
+  --theme-color: #040415;
+  --ds: #AAB3D9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tie {
+  background-color: var(--theme-color);
+  width: 80%;
+  max-width: 60rem;
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  padding: 1.25rem;
+  height: auto;
+}
+
+.kx {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pqi,
+.pqil {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cxc,
+.lpa,
+.asx,
+.twe {
+  width: 100%;
+  min-height: 2.75rem;
+  background-color: var(--theme);
+  border-radius: 0.5rem;
+  color: var(--ds);
+  border: 1px solid rgba(170, 179, 217, 0.12);
+  outline: none;
+  padding: 0 0.75rem;
+  margin: 0;
+}
+
+.cxc {
+  padding: 0.45rem 0.75rem;
+}
+
+.cxc::file-selector-button {
+  border: none;
+  background: #1e62e0;
+  color: white;
+  padding: 0.45rem 0.8rem;
+  border-radius: 0.4rem;
+  margin-left: 0.75rem;
+  cursor: pointer;
+}
+
+.asx::placeholder,
+.twe::placeholder,
+.lpa::placeholder {
+  color: rgba(170, 179, 217, 0.7);
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  background-color: green;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  min-width: 140px;
+  align-self: flex-end;
+}
+
+/* تبلت */
+@media (max-width: 992px) {
+  .tie {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .pqi,
+  .pqil {
+    gap: 0.875rem;
+  }
+}
+
+/* موبایل و تبلت کوچک */
+@media (max-width: 768px) {
+  .tie {
+    padding: 1rem;
+    border-radius: 0.65rem;
+  }
+
+  .pqi,
+  .pqil {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+  .tie {
+    padding: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  .cxc,
+  .lpa,
+  .asx,
+  .twe {
+    min-height: 2.6rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
+  }
+}
+.submit-btn:disabled{
+   cursor: not-allowed;
+  opacity: 0.7;
+}

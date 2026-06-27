@@ -1,0 +1,194 @@
+:root {
+  --theme: #090c1e;
+  --theme-color: #040415;
+  --ds: #aab3d9;
+  --vn: #1b2e4b;
+  --accent: #13a2a6;
+}
+
+/* container کل فرم */
+.matmx {
+  background-color: var(--theme-color);
+  border-radius: 0.75rem;
+  width: 85%;
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  color: var(--ds);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* بخش بالایی */
+.qo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.ang {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.paf {
+  flex: 1;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.edt {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--vn);
+  margin: 0.5rem 0;
+}
+
+/* باکس متن هشدار */
+.cmaz {
+  background-color: var(--vn);
+  border-radius: 0.5rem;
+  color: var(--accent);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* فرم ورودی‌ها */
+.xpa {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* آیکن قفل بالای فرم */
+.marg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--theme-color);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  color: var(--accent);
+}
+
+/* برچسب و فیلد ورودی */
+.lfl {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.lasq {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--vn);
+  background-color: #0d122a;
+  color: #fff;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.lasq:focus {
+  border-color: var(--accent);
+}
+
+/* دکمه ذخیره */
+#ali {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.zah {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.zah:hover {
+  background-color: #10c7cb;
+}
+
+/* آیکن قفل وسط */
+#cnz {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+/* 📱 ریسپانسیو */
+@media (max-width: 992px) {
+  .matmx {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .paf {
+    font-size: 1rem;
+  }
+
+  .marg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .lasq {
+    font-size: 0.9rem;
+  }
+
+  .zah {
+    width: 7rem;
+    height: 2.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .matmx {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .paf {
+    font-size: 0.95rem;
+  }
+
+  .marg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .xam {
+    font-size: 0.8rem;
+  }
+
+  .zah {
+    width: 6rem;
+    font-size: 0.8rem;
+  }
+}
